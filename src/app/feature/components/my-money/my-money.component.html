@@ -1,0 +1,27 @@
+<div class="container is-max-widescreen">
+    <div class="box">
+      <div class="columns">
+        <div class="column">
+          <div *ngFor="let money of myMoney" (change)="calculateTotal()">
+            <div class="columns is-centered">
+              <div class="column pr-1">
+                <input class="input is-info is-medium is-5" placeholder="Asset Name" type="text" (ngModel)="money.location">
+              </div>
+              <div class="column pl-1">
+                <input class="input is-info is-medium is-5" placeholder="Asset Amount" type="number" (ngModel)="money.amount">
+              </div>
+            </div>
+          </div>
+          <div class="columns is-centered is-multiline is-3">
+            <button class="button is-info is-centered m-3" (click)="addNewRow()">Add New Row</button>
+            <button class="button is-info is-centered m-3" (click)="submitData()">Submit Data</button>
+          </div>
+          <div class="level">
+            <div class="level-item"><p class="title is-2">Total Amount: {{total}}</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
