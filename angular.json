@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "money-manager": {
+    "money-management": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/money-manager",
+            "outputPath": "dist/money-management",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -78,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "money-manager:build:production"
+              "browserTarget": "money-management:build:production"
             },
             "dev": {
-              "browserTarget": "money-manager:build:dev"
+              "browserTarget": "money-management:build:dev"
             }
           },
           "defaultConfiguration": "dev"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "money-manager:build"
+            "browserTarget": "money-management:build"
           }
         },
         "test": {
